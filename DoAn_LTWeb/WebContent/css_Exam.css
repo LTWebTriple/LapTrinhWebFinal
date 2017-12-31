@@ -1,0 +1,45 @@
+.formthi {
+    border: 4px solid blue;
+    margin: 5% 16.5%;
+}
+
+td {
+    font-size: 20px;
+    padding: 10px;
+}
+
+table tr:last-child td {
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    margin-bottom: 0.01%;
+    text-align: center;
+    color: red;
+    font-size: 30px;
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 15px;
+        text-align: center;
+    }
+    .formthi {
+        border: 1px solid blue;
+        margin: 5% 0;
+    }
+    td {
+        font-size: 10px;
+        padding: 3px;
+    }
+    table tr:last-child td {
+        text-align: center;
+        padding-top: 20px;
+    }
+}
+
+
+.portlet {
+    overflow: hidden;
+}

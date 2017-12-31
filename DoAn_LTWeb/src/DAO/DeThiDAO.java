@@ -1,0 +1,60 @@
+package DAO;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import model.*;
+
+public class DeThiDAO {
+	private static final String DRIVER_JDBC = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+	private static final String URL_DB = "jdbc:sqlserver://localhost:1433; instance=MSSQLSERVER; databaseName=OnlineTest; user=user; password=123;";
+
+	public List<DeThi> getDeThi() throws SQLException {
+		String TestId;
+		String TestName;
+		String TimeTest;
+		String SubjectName;
+		Connection conn = null;
+		Statement st = null;
+		ResultSet rs = null;
+		try {
+			Class.forName(DRIVER_JDBC);
+			conn = DriverManager.getConnection(URL_DB);
+			System.out.println("Connected successfully ...");
+		} catch (Exception e) {
+			System.out.println("Error connection " + e);
+			return null;
+		}
+		String sql = "select Test.TestId, Test.TestName, Test.Time_Test, Subjects.SubjectName From Subjects, Test, Test_Schedule Where Test.TestId = Test_Schedule.TestId And Test_Schedule.SubjectId = Subjects.SubjectId";
+		st = conn.createStatement();
+
+		rs = st.executeQuery(sql);
+		List<DeThi> DeThi = new ArrayList<DeThi>();
+		while (rs.next()) {
+				TestId = rs.getString("TestId");
+				TestName = rs.getString("TestName");
+				TimeTest = rs.getString("Time_Test");
+				SubjectName = rs.getString("SubjectName");
+				DeThi.add(new DeThi(TestId, TestName, TimeTest, SubjectName));
+		}
+		try {
+			if (conn != null) {
+				conn.close();
+			}
+			if (st != null) {
+				st.close();
+			}
+			if (rs != null) {
+				rs.close();
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return DeThi;
+	}
+}

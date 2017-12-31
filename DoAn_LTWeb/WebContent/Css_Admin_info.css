@@ -1,0 +1,198 @@
+.page-prefooter {
+    background: #3A4251;
+    color: #a2abb7;
+}
+
+.page-prefooter h2 {
+    color: #4db3a4;
+}
+
+.page-footer {
+    background: #303845;
+    color: #a2abb7;
+}
+
+.page-prefooter {
+    padding: 30px 0;
+    clear: both;
+}
+
+.page-prefooter h2 {
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 12px;
+}
+
+.page-prefooter .social-icons {
+    padding-top: 9px;
+}
+
+.page-prefooter .social-icons li {
+    opacity: 0.35;
+    filter: alpha(opacity=35);
+}
+
+.page-prefooter .social-icons li:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.page-prefooter p,
+.page-prefooter address {
+    margin: 0;
+}
+
+
+/* Footer */
+
+.page-footer {
+    font-size: 12px;
+    font-weight: 300;
+    padding: 17px 0;
+}
+
+@media (max-width: 991px) {
+    /* 991px */
+    .page-prefooter {
+        padding-bottom: 10px;
+    }
+    .page-prefooter .footer-block {
+        margin-bottom: 20px;
+    }
+    .page-prefooter>.container {
+        width: 100%;
+        max-width: none !important;
+        margin: 0 !important;
+    }
+    .page-footer>.container {
+        width: 100%;
+        max-width: none !important;
+        margin: 0 !important;
+    }
+}
+
+.page-prefooter>.container {
+    font-size: 15px;
+}
+
+
+/***
+Social Icons
+***/
+
+.social-icons {
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons:before,
+.social-icons:after {
+    content: " ";
+    display: table;
+}
+
+.social-icons:after {
+    clear: both;
+}
+
+.social-icons li {
+    float: left;
+    display: inline;
+    list-style: none;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-indent: -9999px;
+}
+
+.social-icons li>a {
+    border-radius: 2px;
+    width: 28px;
+    height: 28px;
+    display: block;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icons li:hover>a {
+    background-position: 0 -38px;
+}
+
+.social-icons li .facebook {
+    background: url(./photo/social/facebook.png) no-repeat;
+}
+
+.social-icons li .googleplus {
+    background: url(./photo/social/googleplus.png) no-repeat;
+}
+
+.social-icons li .twitter {
+    background: url(./photo/social/twitter.png) no-repeat;
+}
+
+.social-icons li .youtube {
+    background: url(./photo/social/youtube.png) no-repeat;
+}
+
+.social-icons.social-icons-color>li>a {
+    opacity: 0.7;
+    background-position: 0 -38px !important;
+}
+
+.social-icons.social-icons-color>li>a:hover {
+    opacity: 1;
+}
+
+.social-icons.social-icons-circle>li>a {
+    border-radius: 25px !important;
+}
+
+
+/***
+  Inline Social Icons
+  ***/
+
+.social-icon {
+    display: inline-block !important;
+    width: 28px;
+    height: 28px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon.facebook {
+    background: url(./photo/social/facebook.png) no-repeat;
+}
+
+.social-icon.googleplus {
+    background: url(./photo/social/googleplus.png) no-repeat;
+}
+
+.social-icon.twitter {
+    background: url(./photo/social/twitter.png) no-repeat;
+}
+
+.social-icon.youtube {
+    background: url(./photo/social/youtube.png) no-repeat;
+}
+
+.social-icon:hover {
+    background-position: 0 -38px;
+}
+
+.social-icon-color {
+    opacity: 0.7;
+    background-position: 0 -38px !important;
+}
+
+.social-icon-color:hover {
+    opacity: 1;
+}
